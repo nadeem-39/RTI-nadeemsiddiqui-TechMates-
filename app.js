@@ -19,7 +19,7 @@ const openai = new OpenAI({
 // AI API
 
 app.get('/',(req,res)=>{
-    res.render('webPages/aiQuery.ejs',{result:null});
+    res.render('home.ejs',{result:null});
 })
 
 app.post('/chat',async(req,res)=>{
