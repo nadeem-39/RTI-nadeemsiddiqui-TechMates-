@@ -1,0 +1,23 @@
+{
+  "name": "buildwar",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dot": "^1.1.3",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "ejs-mate": "^4.0.0",
+    "env": "^0.0.2",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "openai": "^4.89.1",
+    "path": "^0.12.7"
+  }
+}
