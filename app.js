@@ -29,7 +29,7 @@ app.get('/ai/query',(req,res)=>{
 })
 
 //chat api
-app.post('ai/chat',async(req,res)=>{
+app.post('/ai/chat',async(req,res)=>{
     console.log(req.body.question);
     const message = req.body.question;
 
