@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    background-color: #cdcdcd;
+    overflow: hidden;
+}
+
+#circle{
+    position: relative;
+    left: -90vh;
+    top: 50%;
+    transform: translate(50%, -50%) rotate(100deg);
+    border-radius: 50%;
+    width: 140vmin; /* Use vmin for responsive sizing */
+    height: 140vmin;
+    border: 3px solid #dadada;
+    will-change: transform;
+    transition: transform 0.1s;
+}
+
+#circle-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%; /* Adjust based on your design */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: makes the image itself circular */
+}
+
+.stripe{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 60px;
+    transform-origin: 0% 50%;
+}
+
+.str1 { transform: translate(0, 50%) rotate(-30deg); }
+.str2 { transform: translate(0, 50%) rotate(-10deg); }
+.str3 { transform: translate(0, 50%) rotate(10deg); }
+.str4 { transform: translate(0, 50%) rotate(30deg); }
+.str5 { transform: translate(0, 50%) rotate(50deg); }
+.str6 { transform: translate(0, 50%) rotate(70deg); }
+.str7 { transform: translate(0, 50%) rotate(90deg); }
+.str8 { transform: translate(0, 50%) rotate(110deg); }
+.str9 { transform: translate(0, 50%) rotate(130deg); }
+.str10 { transform: translate(0, 50%) rotate(150deg); }
+.str11 { transform: translate(0, 50%) rotate(170deg); }
+.str12 { transform: translate(0, 50%) rotate(190deg); }
+.str13 { transform: translate(0, 50%) rotate(210deg); }
+.str14 { transform: translate(0, 50%) rotate(230deg); }
+.str15 { transform: translate(0, 50%) rotate(250deg); }
+.str16 { transform: translate(0, 50%) rotate(270deg); }
+.str17 { transform: translate(0, 50%) rotate(290deg); }
+.str18 { transform: translate(0, 50%) rotate(310deg); }
+
+
+.first{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.smcircle{
+    position: absolute;
+    right: -0.25vw;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 50%;
+    width: .5vw;
+    height: .5vw;
+    background-color: #777;
+    z-index: 2;
+}
+
+.second{
+    padding-left: 30px;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+}
+
+:root {
+    --circle-radius: 70vmin; /* Main circle radius */
+    --text-offset: 10vmin;   /* How much further the text should be from the circle's edge */
+  }
+  
+  
+
+.second h4{
+    font-size: 2vw;
+  white-space: nowrap;
+  /* Push the text outward along the rotated stripe’s axis */
+  transform: translateX(var(--text-offset));
+}

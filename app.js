@@ -20,6 +20,9 @@ const openai = new OpenAI({
 
 // AI API
 
+app.get('/',(req,res)=>{
+    res.render('webPages/home.ejs');
+})
 
 app.get('/ai/query',(req,res)=>{
     res.render('webPages/aiQuery.ejs',{result:null});
@@ -41,8 +44,6 @@ app.post('ai/chat',async(req,res)=>{
     }
 })
 
-// formal letter generated ai
-app.get('/ai/generatePaper', async(req,res)=>{
     let name = 'sehaj';
     let address = 'ghaziabad';
     let phone = 98893493;
@@ -51,7 +52,45 @@ app.get('/ai/generatePaper', async(req,res)=>{
     let letterQuery = ' about education ';
     let location = 'delhi';
     let timePeriod = '20day';
-    let date = '23-3-2004';
+    let date = '23-3-2004'; 
+
+app.post('/data/nameAddress',(req,res)=>{
+    name = req.body.name;
+    address = req.body.address;
+    res.render('webPages/2phoneEmail.ejs');
+})
+app.post('/data/phoneEmail',(req,res)=>{
+    phone = req.body.phone;
+    email = req.body.email;
+    res.render('webPages/3query.ejs');
+})
+app.post('/data/query',(req,res)=>{
+
+    letterQuery = req.body.email;
+    res.render('webPages/4deparmentLocation.ejs');
+})
+app.post('/data/departmentLocation',(req,res)=>{
+    departMentName = req.body.departmentName;
+    location = req.body.location;
+    res.render('webPages/5timeperiodDate.ejs');
+})
+app.post('/data/TimePeriodDate',(req,res)=>{
+    date = req.body.date;
+    timePeriod = req.body.timePeriod;
+    res.redirect('/ai/generatePaper');
+})
+
+// formal letter generated ai
+app.get('/ai/generatePaper', async(req,res)=>{
+    // let name = 'sehaj';
+    // let address = 'ghaziabad';
+    // let phone = 98893493;
+    // let email = 'nadeemsiddiqui0390@gmail.com'
+    // let departMentName = "cse";
+    // let letterQuery = ' about education ';
+    // let location = 'delhi';
+    // let timePeriod = '20day';
+    // let date = '23-3-2004';
     
 
     let promt = `Generate a formal RTI (Right to Information) application letter under the RTI Act, 2005. Include the following details in a clear and professional format:
